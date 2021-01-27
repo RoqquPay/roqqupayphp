@@ -7,8 +7,8 @@ class RoqqupayphpClass
     private $secKey;
     private $base_url;
 
-//mine - RQ-SEC-zUsUq9EhPge2zOAMGdCX
-//demo - RQ-PUB-mBcZKVB8a1TO6GGa9M84
+    //mine - RQ-SEC-zUsUq9EhPge2zOAMGdCX
+    //demo - RQ-PUB-mBcZKVB8a1TO6GGa9M84
     public function __construct($secKey = 'RQ-SEC-zUsUq9EhPge2zOAMGdCX')
     {
         $this->secKey = $secKey;
@@ -85,6 +85,7 @@ class RoqqupayphpClass
         $endpoint = "/user/generate-wallet";
         $params = 'token='.$token;
         $generateWallet = $this->sendPostRequest($endpoint, $params);
+
         return $generateWallet;
     }
 
@@ -98,6 +99,7 @@ class RoqqupayphpClass
         $endpoint = '/user/wallets';
         $params = 'token='.$token;
         $wallets = $this->sendPostRequest($endpoint, $params);
+
         return $wallets;
     }
 
@@ -112,6 +114,7 @@ class RoqqupayphpClass
         $endpoint = '/user/delete-wallet';
         $params = 'token='.$token.'&address='.$wallet;
         $deleteWallet = $this->sendPostRequest($endpoint, $params);
+
         return $deleteWallet;
     }
 
@@ -128,13 +131,14 @@ class RoqqupayphpClass
     {
         $endpoint = '/user/send-'.$token;
         $params = 'amount='.$amount.'&wallet='.$wallet;
-        if($memo != ''){
+        if ($memo != '') {
             $params.'&memo='.$memo;
         }
-        if($tag != ""){
+        if ($tag != "") {
             $params.'&tag='.$tag;
         }
         $sendToken = $this->sendPostRequest($endpoint, $params);
+
         return $sendToken;
     }
 
@@ -148,6 +152,7 @@ class RoqqupayphpClass
         $endpoint = '/user/bvn-verify';
         $params = 'bvn='.$bvn;
         $verifyBvn = $this->sendPostRequest($endpoint, $params);
+
         return $verifyBvn;
     }
 
@@ -159,6 +164,7 @@ class RoqqupayphpClass
     {
         $endpoint = '/banks';
         $getBanks = $this->sendGetRequest($endpoint);
+
         return $getBanks;
     }
 
@@ -173,6 +179,7 @@ class RoqqupayphpClass
         $endpoint = '/user/account-resolve';
         $params = 'account_number='.$account_number.'&bank='.$bank;
         $resolveBankAccount = $this->sendPostRequest($endpoint, $params);
+
         return $resolveBankAccount;
     }
 
@@ -187,6 +194,7 @@ class RoqqupayphpClass
         $endpoint = '/user/recharge-airtime';
         $params = 'phone_number='.$phone_number.'&amount='.$amount;
         $rechargeAirtime = $this->sendPostRequest($endpoint, $params);
+
         return $rechargeAirtime;
     }
 
@@ -199,6 +207,7 @@ class RoqqupayphpClass
     {
         $endpoint = '/data/subscriptions?provider='.$provider;
         $dataBundles = $this->sendGetRequest($endpoint);
+
         return $dataBundles;
     }
 
@@ -209,25 +218,27 @@ class RoqqupayphpClass
      * @param $phone_number
      * @return mixed
      */
-   public function dataSubscription($provider, $variation_code, $phone_number)
-   {
-       $endpoint = '/user/pay-data';
-       $params = 'provider='.$provider.'&variation_code='.$variation_code.'&phone_number='.$phone_number;
-       $subscribe = $this->sendPostRequest($endpoint, $params);
-       return $subscribe;
-   }
+    public function dataSubscription($provider, $variation_code, $phone_number)
+    {
+        $endpoint = '/user/pay-data';
+        $params = 'provider='.$provider.'&variation_code='.$variation_code.'&phone_number='.$phone_number;
+        $subscribe = $this->sendPostRequest($endpoint, $params);
+
+        return $subscribe;
+    }
 
     /**
      * Function to get cable bundles
      * @param $provider
      * @return bool
      */
-   public function getCableBundles($provider)
-   {
-       $endpoint = '/cable/subscriptions?provider='.$provider;
-       $getBundles = $this->sendGetRequest($endpoint);
-       return $getBundles;
-   }
+    public function getCableBundles($provider)
+    {
+        $endpoint = '/cable/subscriptions?provider='.$provider;
+        $getBundles = $this->sendGetRequest($endpoint);
+
+        return $getBundles;
+    }
 
     /**
      * Function to verify meter number
@@ -236,12 +247,13 @@ class RoqqupayphpClass
      * @param $meter_number
      * @return bool
      */
-   public function verifyMeterNumber($provider, $meter_type, $meter_number)
-   {
-       $endpoint = '/verify-meter?provider='.$provider.'&meter_type='.$meter_type.'&meter_number='.$meter_number;
-       $verifyMeterNumber = $this->sendGetRequest($endpoint);
-       return $verifyMeterNumber;
-   }
+    public function verifyMeterNumber($provider, $meter_type, $meter_number)
+    {
+        $endpoint = '/verify-meter?provider='.$provider.'&meter_type='.$meter_type.'&meter_number='.$meter_number;
+        $verifyMeterNumber = $this->sendGetRequest($endpoint);
+
+        return $verifyMeterNumber;
+    }
 
     /**
      * Function to recharge electric meter
@@ -252,13 +264,14 @@ class RoqqupayphpClass
      * @param $phone_number
      * @return mixed
      */
-   public function electricMeterRecharge($provider, $meter_type, $meter_number, $amount, $phone_number)
-   {
-       $endpoint = '/user/pay-electric';
-       $params = 'provider='.$provider.'&meter_type='.$meter_type.'&meter_number='.$meter_number.'&amount='.$amount.'$phone_number='.$phone_number;
-       $recharge = $this->sendPostRequest($endpoint, $params);
-       return $recharge;
-   }
+    public function electricMeterRecharge($provider, $meter_type, $meter_number, $amount, $phone_number)
+    {
+        $endpoint = '/user/pay-electric';
+        $params = 'provider='.$provider.'&meter_type='.$meter_type.'&meter_number='.$meter_number.'&amount='.$amount.'$phone_number='.$phone_number;
+        $recharge = $this->sendPostRequest($endpoint, $params);
+
+        return $recharge;
+    }
 
     /**
      * Function to send get request
@@ -304,7 +317,7 @@ class RoqqupayphpClass
             $ch,
             CURLOPT_HTTPHEADER,
             [
-                'Authorization: Bearer '.$this->secKey
+                'Authorization: Bearer '.$this->secKey,
             ]
         );
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);

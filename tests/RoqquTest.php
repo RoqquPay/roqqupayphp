@@ -5,7 +5,6 @@ namespace Roqqupay\Roqqupayphp\Tests;
 use PHPUnit\Framework\TestCase;
 use Roqqupay\Roqqupayphp\RoqqupayphpClass;
 
-
 class RoqquTest extends TestCase
 {
     /** @test */
@@ -136,13 +135,12 @@ class RoqquTest extends TestCase
 //
 //      }
 
-      /** @test */
-     public function it_can_verify_meter_number()
-     {
-         $roqquPayClass = new RoqqupayphpClass();
-         $verifyMeterNumber = $roqquPayClass->verifyMeterNumber('ikeja', 'prepaid', '45055844760');
-         $this->assertEquals("success", $verifyMeterNumber['status']);
-         $this->assertEquals("user info retrieved successfully", $verifyMeterNumber['message']);
-     }
-
+    /** @test */
+    public function it_can_verify_meter_number()
+    {
+        $roqquPayClass = new RoqqupayphpClass();
+        $verifyMeterNumber = $roqquPayClass->verifyMeterNumber('ikeja', 'prepaid', '45055844760');
+        $this->assertEquals("success", $verifyMeterNumber['status']);
+        $this->assertEquals("user info retrieved successfully", $verifyMeterNumber['message']);
+    }
 }
