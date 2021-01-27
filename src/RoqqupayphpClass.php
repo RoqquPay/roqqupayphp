@@ -27,15 +27,6 @@ class RoqqupayphpClass
     }
 
     /**
-     * Function to return secret key
-     * @return mixed|string
-     */
-    public function getSecretKey()
-    {
-        return $this->secKey;
-    }
-
-    /**
      * Function to get token price
      * @param string $token
      */
