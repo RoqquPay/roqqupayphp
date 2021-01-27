@@ -1,21 +1,22 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "roqqupay/roqqupayphp",
+    "description": "roqqupayphp",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "roqqupay",
+        "roqqupayphp"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/roqqupay/roqqupayphp",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Chibuokem ibezim",
+            "email": "chibuokemibezim@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.4|^8.0"
+        "php": "^7.4|^8.0",
+        "ext-curl": "*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.17",
@@ -24,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Roqqupay\\Roqqupayphp\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Roqqupay\\Roqqupayphp\\Tests\\": "tests"
         }
     },
     "scripts": {
