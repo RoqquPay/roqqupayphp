@@ -41,7 +41,7 @@ $priceHistory = $roqqupayClass->getTokenPriceHistory($symbol);
 ```php
 Get data for a wallet address 
 $roqqupayClass = new Roqqupay\Roqqupayphp();
-$symbol = 'btc' or anyother one;
+$symbol = 'btc' or any other one;
 $address = 'wallet address'
 $getWalletAddressData = $roqqupayClass->getAddressData($symbol, $address);
 ```
@@ -51,7 +51,7 @@ Generate wallet address
 This methods needs your secret key to be passed when instantiating the class
 $secretKey = 'RQ-SEC-XXXXXXXXX';
 $roqqupayClass = new Roqqupay\Roqqupayphp($secretKey);
-$token = 'btc' or anyother one;
+$token = 'btc' or any other one;
 $generateWalletAddress = $roqqupayClass->generateWalletAddress($token);
 ```
 
@@ -60,7 +60,7 @@ Get  wallets
 This methods needs your secret key to be passed when instantiating the class
 $secretKey = 'RQ-SEC-XXXXXXXXX';
 $roqqupayClass = new Roqqupay\Roqqupayphp($secretKey);
-$token = 'btc' or anyother one;
+$token = 'btc' or any other one;
 $getWallet = $roqqupayClass->getWallets($token);
 ```
 
@@ -69,28 +69,21 @@ Delete wallet
 This methods needs your secret key to be passed when instantiating the class
 $secretKey = 'RQ-SEC-XXXXXXXXX';
 $roqqupayClass = new Roqqupay\Roqqupayphp($secretKey);
-$token = 'btc' or anyother one;
+$token = 'btc' or any other one;
 $wallet = 'wallet address';
 $deleteWallet = $roqqupayClass->deleteWallet($token, $wallet);
 ```
 
 ```php
 Send token to wallet address 
-go to [Send token reference](https://developers.roqqu.com/reference#send-token-1) to understand which parameters to use for sending different types of token
 amount: This is the amount of token you want to send
 wallet: This is the recipient wallet address that will receive the token
-
 memo: This is only used for BNB, EOS, HIVE and STEEM, these tokens use the optional memo system
 tag: This is only required for XRP transfers
-
 This methods needs your secret key to be passed when instantiating the class
 $secretKey = 'RQ-SEC-XXXXXXXXX';
 $roqqupayClass = new Roqqupay\Roqqupayphp($secretKey);
-$token = 'btc' or anyother one;
-$amount = 'amount you want to send';
-$wallet = 'wallet address to send to';
-$memo = 'memo for when it is required'; ( it is an optional parameter)
-$tag = 'tag for when it is required'; ( it is an optional parameter)
+$token = 'btc' or any other one;
 $sendToken = $roqqupayClass->sendToken($token, $amount, $wallet, $memo, $tag);
 ```
 
@@ -132,7 +125,7 @@ $resolveBankAccount = $roqqupayClass->rechargeAirtime($phone_number, $amount);
 ```php
 Get 
 $roqqupayClass = new Roqqupay\Roqqupayphp();
-$provider = 'mtn' (or any otherone supported)
+$provider = 'mtn' (or any other one supported)
 $dataBundles = $roqqupayClass->getDataBundles($provider);
 ```
 
