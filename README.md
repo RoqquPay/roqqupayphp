@@ -77,6 +77,12 @@ $deleteWallet = $roqqupayClass->deleteWallet($token, $wallet);
 ```php
 Send token to wallet address 
 go to https://developers.roqqu.com/reference#send-token-1 to understand which parameters to use for sending different types of token
+amount: This is the amount of token you want to send
+wallet: This is the recipient wallet address that will receive the token
+
+memo: This is only used for BNB, EOS, HIVE and STEEM, these tokens use the optional memo system
+tag: This is only required for XRP transfers
+
 This methods needs your secret key to be passed when instantiating the class
 $secretKey = 'RQ-SEC-XXXXXXXXX';
 $roqqupayClass = new Roqqupay\Roqqupayphp($secretKey);

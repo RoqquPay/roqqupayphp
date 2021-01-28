@@ -7,8 +7,7 @@ class RoqqupayphpClass
     private $secKey;
     private $base_url;
 
-    //demo - RQ-SEC-zK2vRbRAHNQEqybN5Us4
-    public function __construct($secKey = 'RQ-SEC-zK2vRbRAHNQEqybN5Us4')
+    public function __construct($secKey = '')
     {
         $this->secKey = $secKey;
         $this->base_url = 'https://api.roqqu.com/prod/v1';
