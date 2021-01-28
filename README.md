@@ -41,7 +41,7 @@ $priceHistory = $roqqupayClass->getTokenPriceHistory($symbol);
 ```php
 //Get data for a wallet address 
 $roqqupayClass = new Roqqupay\Roqqupayphp();
-$symbol = 'btc' or any other one;
+$symbol = 'btc' //or any other one;
 $address = 'wallet address'
 $getWalletAddressData = $roqqupayClass->getAddressData($symbol, $address);
 ```
@@ -51,7 +51,7 @@ $getWalletAddressData = $roqqupayClass->getAddressData($symbol, $address);
 //This method needs your secret key to be passed when instantiating the class
 $secretKey = 'RQ-SEC-XXXXXXXXX';
 $roqqupayClass = new Roqqupay\Roqqupayphp($secretKey);
-$token = 'btc' or any other one;
+$token = 'btc' //or any other one;
 $generateWalletAddress = $roqqupayClass->generateWalletAddress($token);
 ```
 
@@ -60,7 +60,7 @@ $generateWalletAddress = $roqqupayClass->generateWalletAddress($token);
 //This method needs your secret key to be passed when instantiating the class
 $secretKey = 'RQ-SEC-XXXXXXXXX';
 $roqqupayClass = new Roqqupay\Roqqupayphp($secretKey);
-$token = 'btc' or any other one;
+$token = 'btc' //or any other one;
 $getWallet = $roqqupayClass->getWallets($token);
 ```
 
@@ -69,7 +69,7 @@ $getWallet = $roqqupayClass->getWallets($token);
 //This method needs your secret key to be passed when instantiating the class
 $secretKey = 'RQ-SEC-XXXXXXXXX';
 $roqqupayClass = new Roqqupay\Roqqupayphp($secretKey);
-$token = 'btc' or any other one;
+$token = 'btc' //or any other one;
 $wallet = 'wallet address';
 $deleteWallet = $roqqupayClass->deleteWallet($token, $wallet);
 ```
@@ -125,7 +125,7 @@ $resolveBankAccount = $roqqupayClass->rechargeAirtime($phone_number, $amount);
 ```php
 //Get data bundles
 $roqqupayClass = new Roqqupay\Roqqupayphp();
-$provider = 'mtn' (or any other one supported)
+$provider = 'mtn' //or any other one supported
 $dataBundles = $roqqupayClass->getDataBundles($provider);
 ```
 
