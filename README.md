@@ -5,7 +5,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/roqqupay/roqqupayphp.svg?style=flat-square)](https://packagist.org/packages/roqqupay/roqqupayphp)
 
 
-Documentation for the api can be found at (https://developers.roqqu.com/reference)
+Documentation for the api can be found at [Roqqu api documentation](https://developers.roqqu.com/reference)
 
 
 ## Installation
@@ -76,7 +76,7 @@ $deleteWallet = $roqqupayClass->deleteWallet($token, $wallet);
 
 ```php
 Send token to wallet address 
-go to https://developers.roqqu.com/reference#send-token-1 to understand which parameters to use for sending different types of token
+go to [Send token reference](https://developers.roqqu.com/reference#send-token-1) to understand which parameters to use for sending different types of token
 amount: This is the amount of token you want to send
 wallet: This is the recipient wallet address that will receive the token
 
