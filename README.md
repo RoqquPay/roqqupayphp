@@ -52,7 +52,7 @@ This methods needs your secret key to be passed when instantiating the class
 $secretKey = 'RQ-SEC-XXXXXXXXX';
 $roqqupayClass = new Roqqupay\Roqqupayphp($secretKey);
 $token = 'btc' or anyother one;
-$generateWalletAddress = $roqqupayClass->generateWalletAddress($token = 'btc');
+$generateWalletAddress = $roqqupayClass->generateWalletAddress($token);
 ```
 
 ```php
