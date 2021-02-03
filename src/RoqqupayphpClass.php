@@ -240,7 +240,8 @@ class RoqqupayphpClass
     public function verifyIucNumber($provider, $iuc)
     {
         $endpoint = '/verify-iuc?provider='.$provider.'&iuc='.$iuc;
-         $verifyIuc = $this->sendGetRequest($endpoint);
+        $verifyIuc = $this->sendGetRequest($endpoint);
+
         return $verifyIuc;
     }
 
@@ -293,7 +294,7 @@ class RoqqupayphpClass
         //send request to server
         $request = curl_exec($ch);
         curl_close($ch);
-        $result = json_decode($request,true);
+        $result = json_decode($request, true);
 
         if ($request) {
             return $result;
