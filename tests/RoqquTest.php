@@ -55,6 +55,17 @@ class RoqquTest extends TestCase
     }
 
     /** @test */
+//    public function it_can_verify_iuc()
+//    {
+//        $roqquPayClass = new RoqqupayphpClass();
+//        $provider = 'dstv';
+//        $iuc = 7029557786;
+//        $verifyIuc = $roqquPayClass->verifyIucNumber($provider, $iuc);
+//        $this->assertEquals("success", $verifyIuc['status']);
+//
+//    }
+
+    /** @test */
     // public function it_can_get_address_data()
     // {
     //     $roqquPayClass = new RoqqupayphpClass();

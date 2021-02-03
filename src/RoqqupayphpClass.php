@@ -232,6 +232,19 @@ class RoqqupayphpClass
     }
 
     /**
+     * Function to verify iuc number
+     * @param $provider
+     * @param $iuc
+     * @return mixed|string
+     */
+    public function verifyIucNumber($provider, $iuc)
+    {
+        $endpoint = '/verify-iuc?provider='.$provider.'&iuc='.$iuc;
+         $verifyIuc = $this->sendGetRequest($endpoint);
+        return $verifyIuc;
+    }
+
+    /**
      * Function to verify meter number
      * @param $provider
      * @param $meter_type
@@ -258,7 +271,7 @@ class RoqqupayphpClass
     public function electricMeterRecharge($provider, $meter_type, $meter_number, $amount, $phone_number)
     {
         $endpoint = '/user/pay-electric';
-        $params = 'provider='.$provider.'&meter_type='.$meter_type.'&meter_number='.$meter_number.'&amount='.$amount.'$phone_number='.$phone_number;
+        $params = 'provider='.$provider.'&meter_type='.$meter_type.'&meter_number='.$meter_number.'&amount='.$amount.'&phone_number='.$phone_number;
         $recharge = $this->sendPostRequest($endpoint, $params);
 
         return $recharge;
@@ -281,7 +294,7 @@ class RoqqupayphpClass
         //send request to server
         $request = curl_exec($ch);
         curl_close($ch);
-        $result = json_decode($request, true);
+        $result = json_decode($request,true);
 
         if ($request) {
             return $result;
