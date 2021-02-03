@@ -283,9 +283,10 @@ class RoqqupayphpClass
         if ($request) {
             return $result;
         } else {
-            var_dump($request);
-            die("Something went wrong while executing curl. Uncomment the var_dump line above this line to see what the issue is. Please check your CURL command to make sure everything is ok");
-//            return false;
+            // var_dump($request);
+            // die("Something went wrong while executing curl. Uncomment the var_dump line above this line to see what the issue is. Please check your CURL command to make sure everything is ok");
+             
+            return 'Network error occured';
         }
     }
 
@@ -318,9 +319,9 @@ class RoqqupayphpClass
         if ($request) {
             return $result;
         } else {
-            var_dump($request);
-            die("Something went wrong while executing curl. Uncomment the var_dump line above this line to see what the issue is. Please check your CURL command to make sure everything is ok");
-//            return false;
+           // var_dump($request);
+            // die("Something went wrong while executing curl. Uncomment the var_dump line above this line to see what the issue is. Please check your CURL command to make sure everything is ok");
+           return 'Network error occured';
         }
     }
 }
