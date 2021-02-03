@@ -55,42 +55,42 @@ class RoqquTest extends TestCase
     }
 
     /** @test */
-    public function it_can_get_address_data()
-    {
-        $roqquPayClass = new RoqqupayphpClass();
-        $addressData = $roqquPayClass->getAddressData("btc", "3EEhPSkNM86N755DgTdSgkJN4AFaZCC5jU");
-        $this->assertEquals("success", $addressData['status']);
-        $this->assertEquals("blockchain data retrieved successfully", $addressData['message']);
-        $this->assertEquals("bitcoin", $addressData["data"]["network"]);
-    }
+    // public function it_can_get_address_data()
+    // {
+    //     $roqquPayClass = new RoqqupayphpClass();
+    //     $addressData = $roqquPayClass->getAddressData("btc", "3EEhPSkNM86N755DgTdSgkJN4AFaZCC5jU");
+    //     $this->assertEquals("success", $addressData['status']);
+    //     $this->assertEquals("blockchain data retrieved successfully", $addressData['message']);
+    //     $this->assertEquals("bitcoin", $addressData["data"]["network"]);
+    // }
 
     /** @test */
-    public function it_can_generate_wallet_address()
-    {
-        $roqquPayClass = new RoqqupayphpClass();
-        $generateWallet = $roqquPayClass->generateWalletAddress("btc");
-        $this->assertEquals("success", $generateWallet['status']);
-        $this->assertEquals("wallet created successfully", $generateWallet['message']);
-        $this->assertEquals("btc", $generateWallet['data']['type']);
-    }
+    // public function it_can_generate_wallet_address()
+    // {
+    //     $roqquPayClass = new RoqqupayphpClass();
+    //     $generateWallet = $roqquPayClass->generateWalletAddress("btc");
+    //     $this->assertEquals("success", $generateWallet['status']);
+    //     $this->assertEquals("wallet created successfully", $generateWallet['message']);
+    //     $this->assertEquals("btc", $generateWallet['data']['type']);
+    // }
 
     /** @test */
-    public function it_can_get_wallets()
-    {
-        $roqquPayClass = new RoqqupayphpClass();
-        $wallets = $roqquPayClass->getWallets('btc');
-        $this->assertEquals("success", $wallets['status']);
-        $this->assertEquals("wallets retrieved successfully", $wallets['message']);
-    }
+    // public function it_can_get_wallets()
+    // {
+    //     $roqquPayClass = new RoqqupayphpClass();
+    //     $wallets = $roqquPayClass->getWallets('btc');
+    //     $this->assertEquals("success", $wallets['status']);
+    //     $this->assertEquals("wallets retrieved successfully", $wallets['message']);
+    // }
 
     /** @test */
-    public function it_can_delete_wallet()
-    {
-        $roqquPayClass = new RoqqupayphpClass();
-        $deleteWallet = $roqquPayClass->deleteWallet('btc', '34MRPoy9A88mXzAhMMGQYCiADm2twJhArv');
-        $this->assertEquals("success", $deleteWallet['status']);
-        $this->assertEquals("wallet deleted successfully", $deleteWallet['message']);
-    }
+    // public function it_can_delete_wallet()
+    // {
+    //     $roqquPayClass = new RoqqupayphpClass();
+    //     $deleteWallet = $roqquPayClass->deleteWallet('btc', '34MRPoy9A88mXzAhMMGQYCiADm2twJhArv');
+    //     $this->assertEquals("success", $deleteWallet['status']);
+    //     $this->assertEquals("wallet deleted successfully", $deleteWallet['message']);
+    // }
 
     /** @test */
     public function it_can_get_banks()
@@ -102,14 +102,14 @@ class RoqquTest extends TestCase
     }
 
     /** @test */
-    public function it_can_resolve_bank_account()
-    {
-        $roqquPayClass = new RoqqupayphpClass();
-        $resolveAccount = $roqquPayClass->bankAccountResolve('3051559336', 'First Bank of Nigeria Limited');
-        $this->assertEquals("success", $resolveAccount['status']);
-        $this->assertEquals("account details retrieved successfully", $resolveAccount['message']);
-        $this->assertEquals("ONOMOR ESEOGHENE BENJAMIN", $resolveAccount['data']);
-    }
+    // public function it_can_resolve_bank_account()
+    // {
+    //     $roqquPayClass = new RoqqupayphpClass();
+    //     $resolveAccount = $roqquPayClass->bankAccountResolve('3051559336', 'First Bank of Nigeria Limited');
+    //     $this->assertEquals("success", $resolveAccount['status']);
+    //     $this->assertEquals("account details retrieved successfully", $resolveAccount['message']);
+    //     $this->assertEquals("ONOMOR ESEOGHENE BENJAMIN", $resolveAccount['data']);
+    // }
 
     /** @test */
     public function it_can_get_data_bundles()
@@ -130,11 +130,11 @@ class RoqquTest extends TestCase
     }
 
     /** @test */
-    public function it_can_verify_meter_number()
-    {
-        $roqquPayClass = new RoqqupayphpClass();
-        $verifyMeterNumber = $roqquPayClass->verifyMeterNumber('ikeja', 'prepaid', '45055844760');
-        $this->assertEquals("success", $verifyMeterNumber['status']);
-        $this->assertEquals("user info retrieved successfully", $verifyMeterNumber['message']);
-    }
+    // public function it_can_verify_meter_number()
+    // {
+    //     $roqquPayClass = new RoqqupayphpClass();
+    //     $verifyMeterNumber = $roqquPayClass->verifyMeterNumber('ikeja', 'prepaid', '45055844760');
+    //     $this->assertEquals("success", $verifyMeterNumber['status']);
+    //     $this->assertEquals("user info retrieved successfully", $verifyMeterNumber['message']);
+    // }
 }
