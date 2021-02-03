@@ -189,7 +189,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
--   [Chibuokem ibezim](https://github.com/Chibuokemibezim)
+-   [Chibuokem ibezim](https://github.com/chibuokem)
 -   [All Contributors](../../contributors)
 
 ## License
