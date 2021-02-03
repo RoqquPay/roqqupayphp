@@ -97,7 +97,7 @@ $verifyBvn = $roqquPayClass->bvnVerify($bvn);
 ```php
 //Get banks
 $roqquPayClass = new Roqqupay\Roqqupayphp();
-$tokenPrices = $roqquPayClass->getBanks();
+$banks = $roqquPayClass->getBanks();
 ```
 
 ```php
@@ -117,7 +117,7 @@ $secretKey = 'RQ-SEC-XXXXXXXXX';
 $roqquPayClass = new Roqqupay\Roqqupayphp($secretKey);
 $phone_number = 'Phone number to recharge';
 $amount = 'Amount to recharge';
-$resolveBankAccount = $roqquPayClass->rechargeAirtime($phone_number, $amount);
+$rechargeAirtime = $roqquPayClass->rechargeAirtime($phone_number, $amount);
 ```
 
 ```php
