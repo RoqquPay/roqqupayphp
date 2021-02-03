@@ -277,7 +277,6 @@ class RoqqupayphpClass
         return $recharge;
     }
 
-
     /**
      * Function to send get request
      * @param $endpoint
