@@ -40,7 +40,7 @@ class RoqqupayphpClass
     /**
      * Function to get token price history
      * @param string $symbol
-     * @return bool
+     * @return mixed
      */
     public function getTokenPriceHistory($symbol = 'btc')
     {
@@ -54,7 +54,7 @@ class RoqqupayphpClass
      * Function to get address data
      * @param $symbol
      * @param $address
-     * @return bool
+     * @return mixed
      */
     public function getAddressData($symbol, $address)
     {
@@ -147,7 +147,7 @@ class RoqqupayphpClass
 
     /**
      * Function to get banks
-     * @return bool
+     * @return mixed
      */
     public function getBanks()
     {
@@ -190,7 +190,7 @@ class RoqqupayphpClass
     /**
      * Function to get data bundles
      * @param $provider
-     * @return bool
+     * @return mixed
      */
     public function getDataBundles($provider)
     {
@@ -219,7 +219,7 @@ class RoqqupayphpClass
     /**
      * Function to get cable bundles
      * @param $provider
-     * @return bool
+     * @return mixed
      */
     public function getCableBundles($provider)
     {
@@ -234,7 +234,7 @@ class RoqqupayphpClass
      * @param $provider
      * @param $meter_type
      * @param $meter_number
-     * @return bool
+     * @return mixed
      */
     public function verifyMeterNumber($provider, $meter_type, $meter_number)
     {
@@ -267,7 +267,7 @@ class RoqqupayphpClass
      * Function to send get request
      *
      * @param [type] $endpoint
-     * @return void
+     * @return mixed
      */
     private function sendGetRequest($endpoint)
     {
