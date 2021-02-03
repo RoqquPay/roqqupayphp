@@ -14,9 +14,9 @@ class RoqqupayphpClass
     }
 
     /**
-    * Function to get token prices
-    * @return bool
-    */
+     * Function to get token prices
+     * @return mixed|string
+     */
     public function getallTokenPrices()
     {
         $endpoint = '/prices';
@@ -28,6 +28,7 @@ class RoqqupayphpClass
     /**
      * Function to get token price
      * @param string $token
+     * @return mixed|string
      */
     public function getTokenPrice($token = 'btc')
     {
@@ -40,7 +41,7 @@ class RoqqupayphpClass
     /**
      * Function to get token price history
      * @param string $symbol
-     * @return mixed
+     * @return mixed|string
      */
     public function getTokenPriceHistory($symbol = 'btc')
     {
@@ -54,7 +55,7 @@ class RoqqupayphpClass
      * Function to get address data
      * @param $symbol
      * @param $address
-     * @return mixed
+     * @return mixed|string
      */
     public function getAddressData($symbol, $address)
     {
@@ -67,7 +68,8 @@ class RoqqupayphpClass
 
     /**
      * Function to generate wallet address
-     * @return mixed
+     * @param string $token
+     * @return mixed|string
      */
     public function generateWalletAddress($token = 'btc')
     {
@@ -81,7 +83,7 @@ class RoqqupayphpClass
     /**
      * Function to get wallets
      * @param string $token
-     * @return mixed
+     * @return mixed|string
      */
     public function getWallets($token = 'btc')
     {
@@ -96,7 +98,7 @@ class RoqqupayphpClass
      * Function to delete wallet address
      * @param $token
      * @param $wallet
-     * @return mixed
+     * @return mixed|string
      */
     public function deleteWallet($token, $wallet)
     {
@@ -114,7 +116,7 @@ class RoqqupayphpClass
      * @param $wallet
      * @param string $memo
      * @param string $tag
-     * @return mixed
+     * @return mixed|string
      */
     public function sendToken($token, $amount, $wallet, $memo = '', $tag = '')
     {
@@ -134,7 +136,7 @@ class RoqqupayphpClass
     /**
      * Function to verify bvn
      * @param $bvn
-     * @return mixed
+     * @return mixed|string
      */
     public function bvnVerify($bvn)
     {
@@ -147,7 +149,7 @@ class RoqqupayphpClass
 
     /**
      * Function to get banks
-     * @return mixed
+     * @return mixed|string
      */
     public function getBanks()
     {
@@ -161,7 +163,7 @@ class RoqqupayphpClass
      * Function to resolve bank account
      * @param $account_number
      * @param $bank
-     * @return mixed
+     * @return mixed|string
      */
     public function bankAccountResolve($account_number, $bank)
     {
@@ -176,7 +178,7 @@ class RoqqupayphpClass
      * Function to recharge airtime
      * @param $phone_number
      * @param $amount
-     * @return mixed
+     * @return mixed|string
      */
     public function rechargeAirtime($phone_number, $amount)
     {
@@ -190,7 +192,7 @@ class RoqqupayphpClass
     /**
      * Function to get data bundles
      * @param $provider
-     * @return mixed
+     * @return mixed|string
      */
     public function getDataBundles($provider)
     {
@@ -205,7 +207,7 @@ class RoqqupayphpClass
      * @param $provider
      * @param $variation_code
      * @param $phone_number
-     * @return mixed
+     * @return mixed|string
      */
     public function dataSubscription($provider, $variation_code, $phone_number)
     {
@@ -219,7 +221,7 @@ class RoqqupayphpClass
     /**
      * Function to get cable bundles
      * @param $provider
-     * @return mixed
+     * @return mixed|string
      */
     public function getCableBundles($provider)
     {
@@ -234,7 +236,7 @@ class RoqqupayphpClass
      * @param $provider
      * @param $meter_type
      * @param $meter_number
-     * @return mixed
+     * @return mixed|string
      */
     public function verifyMeterNumber($provider, $meter_type, $meter_number)
     {
@@ -245,13 +247,13 @@ class RoqqupayphpClass
     }
 
     /**
-     * Function to recharge electric meter
+     * Function for electric meter recharge
      * @param $provider
      * @param $meter_type
      * @param $meter_number
      * @param $amount
      * @param $phone_number
-     * @return mixed
+     * @return mixed|string
      */
     public function electricMeterRecharge($provider, $meter_type, $meter_number, $amount, $phone_number)
     {
@@ -262,11 +264,11 @@ class RoqqupayphpClass
         return $recharge;
     }
 
+
     /**
      * Function to send get request
-     *
-     * @param [type] $endpoint
-     * @return mixed
+     * @param $endpoint
+     * @return mixed|string
      */
     private function sendGetRequest($endpoint)
     {
@@ -295,7 +297,7 @@ class RoqqupayphpClass
      * Function to send post request
      * @param $endpoint
      * @param $params
-     * @return mixed
+     * @return mixed|string
      */
     private function sendPostRequest($endpoint, $params)
     {
