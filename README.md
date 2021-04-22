@@ -14,7 +14,6 @@ You can install the package via composer:
 composer require roqqupay/roqqupayphp
 ```
 
-bvn
 
 ```php
 //Get all token prices
