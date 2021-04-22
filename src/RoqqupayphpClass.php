@@ -148,6 +148,20 @@ class RoqqupayphpClass
     }
 
     /**
+     * Function to verify bvn
+     * @param $bvn
+     * @return mixed|string
+     */
+    public function verifyNin($nin)
+    {
+        $endpoint = '/user/nin-verify';
+        $params = 'nin='.$nin;
+        $verifyNin = $this->sendPostRequest($endpoint, $params);
+
+        return $verifyNin;
+    }
+
+    /**
      * Function to get banks
      * @return mixed|string
      */
@@ -305,6 +319,8 @@ class RoqqupayphpClass
             return 'Network error occured';
         }
     }
+
+
 
     /**
      * Function to send post request
