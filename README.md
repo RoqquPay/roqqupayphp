@@ -14,7 +14,7 @@ You can install the package via composer:
 composer require roqqupay/roqqupayphp
 ```
 
-## Usage
+bvn
 
 ```php
 //Get all token prices
@@ -92,6 +92,15 @@ $secretKey = 'RQ-SEC-XXXXXXXXX';
 $roqquPayClass = new Roqqupay\Roqqupayphp($secretKey);
 $bvn = 'Your bvn';
 $verifyBvn = $roqquPayClass->bvnVerify($bvn);
+```
+
+```php
+//Verify nin
+//This method needs your secret key to be passed when instantiating the class
+$secretKey = 'RQ-SEC-XXXXXXXXX';
+$roqquPayClass = new Roqqupay\Roqqupayphp($secretKey);
+$nin = 'Nin number';
+$verifyNin = $roqquPayClass->verifyNin($nin);
 ```
 
 ```php
