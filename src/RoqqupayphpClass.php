@@ -320,8 +320,6 @@ class RoqqupayphpClass
         }
     }
 
-
-
     /**
      * Function to send post request
      * @param $endpoint
